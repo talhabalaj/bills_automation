@@ -13,7 +13,7 @@ import { Bill } from "./env";
 export default async (_request: Request, response: Response) => {
   const accessToken = await getAccessToken();
 
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
   const page = await browser.newPage();
   await page.setRequestInterception(true);
 
