@@ -55,5 +55,5 @@ export default async (_request: Request, response: Response) => {
     readableStream: readableStream,
   });
 
-  response.status(200).end({ worked: true });
+  response.status(200).end();
 };
